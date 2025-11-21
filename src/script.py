@@ -14,7 +14,7 @@ from sklearn.utils import class_weight
 from sklearn.model_selection import cross_val_score
 
 import statsmodels.api as sm
-
+##FUNCION QUE PREPARA DATOS PARA EL MODELO
 def prepare_platform_data(df, platform):
     dfp = df.copy()  # Copia del DF para no modificar el original
 
@@ -76,7 +76,7 @@ def evaluar_modelos(X, y, nombre_plataforma, random_state=42):
         X, y, test_size=0.2, random_state=random_state
     )
 
-    # Entrenar y evaluar cada modelo
+    # Entrenar y evaluar cada modelo.
     for nombre, modelo in models.items():
         modelo.fit(X_train, y_train)        # Entrena el modelo
         pred = modelo.predict(X_test)       # Predicciones del modelo
@@ -93,6 +93,7 @@ def evaluar_modelos(X, y, nombre_plataforma, random_state=42):
 
     print(f"\n--- Plataforma: {nombre_plataforma} | filas usadas: {X.shape[0]} ---")
     print(df_resultados.sort_values("R2", ascending=False))   # Mostrar ordenados por mejor R2
+
 
     # Seleccionar el mejor modelo
     best = df_resultados.sort_values("R2", ascending=False).iloc[0]
