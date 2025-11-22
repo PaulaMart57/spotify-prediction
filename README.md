@@ -1,10 +1,9 @@
 # spotify-prediction
-Modelo de regresión lineal para predecir popularidad de canciones
+Modelo de regresión Logistica para predecir cuando una cancion es explicita
 # Objetivos 
 # Objetivo General
-Predecir los factores que influyen para que las canciones sean más reproducidas en que plataforma 
+Desarrollar un modelo de clasificación logística capaz de predecir si una canción es explícita o no explícita, utilizando las variables disponibles en la base de datos de canciones más reproducidas.
 # Objetivos Especificos
-1. analizar el conjunto de la base de datos
-2. determinar las relaciones entre variables según la cantidad de reproducciones o plataforma
-3. Evaluar el modelo mas factible a la hora de predecir la popularidad de cada canción según la plataforma
-prueba
+1. Analizar la estructura y contenido del conjunto de datos para comprender su calidad y composición.
+2. Determinar la relación entre las variables del dataset y su influencia en la condición de canción explícita.
+3. Evaluar el desempeño del modelo de regresión logística para clasificar canciones como explícitas o no explícitas.
